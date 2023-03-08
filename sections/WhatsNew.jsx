@@ -17,11 +17,11 @@ const WhatsNew = () => (
       className={`${styles.innerWidth} mx-auto flex lg:flex-row flex-col gap-8`}
     >
       <motion.div
-        variants={fadeIn('right', 'tween', 0.2, 1)}
+        variants={fadeIn('left', 'tween', 0.2, 1)}
         className="flex-[0.75] flex justify-center flex-col"
       >
-        <TypingText title="| What's New?" />
-        <TitleText title={<>What's new about Metaversus?</>} />
+        <TypingText title="| به وب استودیو خوش آمدید" />
+        <TitleText title={<>طراحی وبسایت و ارائه خدمات دیجیتال</>} />
         <div className="mt-[48px] flex flex-wrap justify-between gap-[24px]">
           {newFeatures.map((feature) => (
             <NewFeatures
@@ -32,7 +32,7 @@ const WhatsNew = () => (
         </div>
       </motion.div>
       <motion.div
-        variants={planetVariants('right')}
+        variants={planetVariants('left')}
         className={`flex-1 ${styles.flexCenter}`}
       >
         <img
