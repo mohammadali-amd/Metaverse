@@ -21,11 +21,11 @@ const Explore = () => {
       >
 
         <TypingText
-          title="| The World"
+          title="| نمونه کار های ما"
           textStyles="text-center"
         />
         <TitleText
-          title={<>Choose the worls you want <br className="md:block hidden" />to explore</>}
+          title={<>با ما کسب و کار خود را <br className="md:block hidden" />بروز کنید</>}
           textStyles="text-center"
         />
         <div className="mt-[50px] flex lg:flex-row flex-col min-h-[70vh] gap-5">
