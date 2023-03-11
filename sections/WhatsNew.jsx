@@ -14,7 +14,7 @@ const WhatsNew = () => (
       initial="hidden"
       whileInView="show"
       viewport={{ once: false, amount: 0.25 }}
-      className={`${styles.innerWidth} mx-auto flex lg:flex-row flex-col gap-8`}
+      className={`${styles.innerWidth} mx-auto flex flex-col-reverse lg:flex-row flex-col gap-8`}
     >
       <motion.div
         variants={fadeIn('left', 'tween', 0.2, 1)}
@@ -32,12 +32,12 @@ const WhatsNew = () => (
         </div>
       </motion.div>
       <motion.div
-        variants={planetVariants('left')}
+        variants={fadeIn('right', 'tween', 0.2, 1)}
         className={`flex-1 ${styles.flexCenter}`}
       >
         <img
-          src="/whats-new.png"
-          alt="whats-new"
+          src="/Hero-Image.svg"
+          alt="Hero-Image"
           className="w-[90%] h-[90%] object-contain"
         />
       </motion.div>
