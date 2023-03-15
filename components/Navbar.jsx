@@ -1,5 +1,3 @@
-'use client';
-
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
@@ -8,11 +6,11 @@ import styles from '../styles';
 import { navVariants } from '../utils/motion';
 
 const links = [
-  { name: 'صفحه اصلی', slug: 'sdf' },
-  { name: ' نمونه کار ها', slug: 'asdfsdbc' },
-  { name: 'تعرفه ها', slug: 'abwwc' },
-  { name: 'درباره ما', slug: 'aasdbc' },
-  { name: 'تماس با ما', slug: 'asda' },
+  { name: 'صفحه اصلی', slug: '/' },
+  { name: ' نمونه کار ها', slug: 'portfolio' },
+  { name: 'تعرفه ها', slug: 'pricing' },
+  { name: 'درباره ما', slug: 'about-us' },
+  { name: 'تماس با ما', slug: 'contact-us' },
 ];
 
 const Navbar = () => {
@@ -24,7 +22,7 @@ const Navbar = () => {
       initial="hidden"
       whileInView="show"
       viewport={{ once: true }}
-      className={`${styles.xPaddings} py-8 relative`}
+      className={`${styles.xPaddings} pt-8 relative`}
     >
       {/* Gradient */}
       <div className="absolute w-[50%] inset-0 gradient-01" />
