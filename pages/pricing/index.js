@@ -1,4 +1,5 @@
 import PricingCard from '../../components/PricingCard';
+import About from '../../sections/About';
 
 const pricingData = [
   {
@@ -42,9 +43,20 @@ const pricingData = [
   },
 ];
 
+const HeroText = {
+  title: 'تعرفه ها',
+  paragraph: `
+  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد.
+  `,
+};
+
 const Prices = () => (
   <div className="py-12">
-    <div className="flex items-center justify-center">
+    <About
+      title={HeroText.title}
+      paragraph={HeroText.paragraph}
+    />
+    <div className="flex items-center justify-center py-8">
       <div className="flex flex-col my-6 space-y-6 md:space-y-0 md:flex-row md:my-0 gap-8">
         {pricingData.map((item) => (
           <PricingCard
