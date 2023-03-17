@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { socials } from '../constants';
 
 import styles from '../styles';
@@ -9,14 +10,20 @@ const Footer = () => (
     variants={footerVariants}
     initial="hidden"
     whileInView="show"
-    className={`${styles.paddings} py-8 relative`}
+    className="md:py-16 px-6 py-12 relative"
   >
     <div className="footer-gradient" />
 
     <div className={`${styles.innerWidth} mx-auto flex flex-col gap-8`}>
       <div className="flex items-center justify-between flex-wrap gap-5">
-        <h4 className="font-bold md:text-[64px] text-[44px] text-white">Web Studio</h4>
-        <button type="button" className="flex items-center h-fit py-4 px-6 bg-[#25618b] rounded-[32px] gap-[12px]">
+        <div className="text-[18px] font-bold text-white hidden lg:flex gap-10">
+          <Link href="/">صفحه اصلی</Link>
+          <Link href="/portfolio">نمونه کار ها</Link>
+          <Link href="/pricing">تعرفه ها</Link>
+          <Link href="/about-us">درباره ما</Link>
+          <Link href="/contact-us">تماس با ما</Link>
+        </div>
+        <Link href="/contact-us" className="flex items-center h-fit py-4 px-6 bg-[#25618b] rounded-[32px] gap-[12px]">
           <img
             src="headset.svg"
             alt="headset"
@@ -25,16 +32,16 @@ const Footer = () => (
           <span className="font-normal text-[16px] text-white">
             با ما در تماس باشید
           </span>
-        </button>
+        </Link>
       </div>
 
       <div className="flex flex-col">
         <div className="mb-[50px] h-[2px] bg-white opacity-10" />
 
         <div className="flex items-center justify-between flex-wrap gap-4">
-          <h4 className="font-extrabold text-[24px] text-white">وب استودیو</h4>
+          <Link href="/contact-us" className="font-extrabold text-[24px] text-white">وب استودیو</Link>
           <p className="font-normal text-[14px] text-white opacity-50">
-            تمامی حقوق این سایت متعلق به وب استودیو می باشد.
+            تمامی حقوق این سایت متعلق به <Link href="/" className="text-teal-300">وب استودیو</Link> می باشد.
           </p>
           <div className="flex gap-4">
             {socials.map((social) => (

@@ -1,5 +1,5 @@
-const PricingCard = ({ color, type, title, price, CTA, data }) => (
-  <div className={`bg-${color} rounded-xl text-white`}>
+const PricingCard = ({ color = 'rgb(51 65 85)', type, title, price, CTA, data }) => (
+  <div className="rounded-xl text-white" style={{ backgroundColor: `${color}` }}>
     {/* <!-- Upper Container --> */}
     <div className="mx-3 px-3 py-8 mt-3 rounded-t-xl bg-slate-800 xl:w-[400px]">
       <div className="text-center ">
@@ -13,7 +13,7 @@ const PricingCard = ({ color, type, title, price, CTA, data }) => (
     </div>
 
     {/* <!-- Border --> */}
-    <div className={`border-t border-${color}`} />
+    <div style={{ borderTop: `1px solid ${color}` }} />
 
     {/* <!-- Lower Container --> */}
     <div className="p-8 mx-3 mb-3 rounded-b-xl bg-slate-800">

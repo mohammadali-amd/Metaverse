@@ -40,7 +40,7 @@ const WhatsNew = () => (
           className="w-[90%] h-[90%] object-contain"
           width={100}
           height={100}
-          loading="lazy"
+          priority
         />
       </motion.div>
     </motion.div>
