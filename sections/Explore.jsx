@@ -2,12 +2,12 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 
 import styles from '../styles';
-import { staggerContainer } from '../utils/motion';
+import { fadeIn, staggerContainer } from '../utils/motion';
 import { ExploreCard, TitleText, TypingText } from '../components';
 import { exploreWorlds } from '../constants';
 
-const Explore = () => {
-  const [active, setActive] = useState('world-2');
+const Explore = ({ paragraph }) => {
+  const [active, setActive] = useState('project-3');
   return (
     <section className={`${styles.paddings}`} id="explore">
       <motion.div
@@ -23,9 +23,10 @@ const Explore = () => {
           textStyles="text-center"
         />
         <TitleText
-          title={<>با ما کسب و کار خود را <br className="md:block hidden" />بروز کنید</>}
+          title={<>با ما کسب و کار خود را بروز کنید</>}
           textStyles="text-center"
         />
+
         <div className="mt-[50px] flex lg:flex-row flex-col min-h-[70vh] gap-5">
           {exploreWorlds.map((world, index) => (
             <ExploreCard

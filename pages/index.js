@@ -12,7 +12,7 @@ const Page = () => (
     </div>
     <div className="relative">
       {/* <Insights /> */}
-      <div className="gradient-04 z-0" />
+      {/* <div className="gradient-04 z-0" /> */}
     </div>
   </div>
 );

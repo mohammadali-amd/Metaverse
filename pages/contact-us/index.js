@@ -1,8 +1,7 @@
-import { Feedback, World } from '../../sections';
+import { World } from '../../sections';
 
 const ContactUs = () => (
   <div className="py-12">
-    <Feedback />
     <World />
   </div>
 );

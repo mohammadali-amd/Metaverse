@@ -1,5 +1,12 @@
+import { motion } from 'framer-motion';
+
+import { fadeIn } from '../utils/motion';
+
 const PricingCard = ({ color = 'rgb(51 65 85)', type, title, price, CTA, data }) => (
-  <div className="rounded-xl text-white" style={{ backgroundColor: `${color}` }}>
+  <motion.div 
+    variants={fadeIn('up', 'spring', 1.2, 0.75)}
+    className="rounded-xl text-white" style={{ backgroundColor: `${color}` }}
+  >
     {/* <!-- Upper Container --> */}
     <div className="mx-3 px-3 py-8 mt-3 rounded-t-xl bg-slate-800 xl:w-[400px]">
       <div className="text-center ">
@@ -41,7 +48,7 @@ const PricingCard = ({ color = 'rgb(51 65 85)', type, title, price, CTA, data })
       </div>
 
     </div>
-  </div>
+  </motion.div>
 );
 
 export default PricingCard;

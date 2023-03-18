@@ -1,28 +1,28 @@
 export const exploreWorlds = [
   {
-    id: 'world-1',
-    imgUrl: '/planet-01.png',
-    title: 'The Hogwarts',
+    id: 'project-1',
+    imgUrl: '/aramico.jpg',
+    title: 'Aramico Company',
   },
   {
-    id: 'world-2',
-    imgUrl: '/planet-02.png',
-    title: 'The Upside Down',
+    id: 'project-2',
+    imgUrl: '/itad.jpg',
+    title: 'ITAD Company',
   },
   {
-    id: 'world-3',
-    imgUrl: '/planet-03.png',
-    title: 'Kadirojo Permai',
+    id: 'project-3',
+    imgUrl: '/react-tailwind.jpg',
+    title: 'Hoo-Bank',
   },
   {
-    id: 'world-4',
-    imgUrl: '/planet-04.png',
-    title: 'Paradise Island',
+    id: 'project-4',
+    imgUrl: '/dashboard.jpg',
+    title: 'Dashboard',
   },
   {
-    id: 'world-5',
-    imgUrl: '/planet-05.png',
-    title: 'Hawkins Labs',
+    id: 'project-5',
+    imgUrl: '/fitness.jpg',
+    title: 'Fittness App',
   },
 ];
 
