@@ -17,9 +17,9 @@ const Footer = () => (
     <div className={`${styles.innerWidth} mx-auto flex flex-col gap-8`}>
       <div className="flex items-center justify-between flex-wrap gap-5">
         <div className="text-[18px] font-bold text-white hidden lg:flex gap-10">
-          <Link href="/">صفحه اصلی</Link>
-          <Link href="/portfolio">نمونه کار ها</Link>
-          <Link href="/pricing">تعرفه ها</Link>
+          <Link href="/#top" scroll={false}>صفحه اصلی</Link>
+          <Link href="/#portfolio" scroll={false}>نمونه کار ها</Link>
+          <Link href="/#pricing" scroll={false}>تعرفه ها</Link>
           <Link href="/about-us">درباره ما</Link>
           <Link href="/contact-us">تماس با ما</Link>
         </div>
@@ -39,9 +39,9 @@ const Footer = () => (
         <div className="mb-[50px] h-[2px] bg-white opacity-10" />
 
         <div className="flex items-center justify-between flex-wrap gap-4">
-          <Link href="/contact-us" className="font-extrabold text-[24px] text-white">وب استودیو</Link>
+          <Link href="/#top" scroll={false} className="font-extrabold text-[24px] text-white">وب استودیو</Link>
           <p className="font-normal text-[14px] text-white opacity-50">
-            تمامی حقوق این سایت متعلق به <Link href="/" className="text-teal-300">وب استودیو</Link> می باشد.
+            تمامی حقوق این سایت متعلق به <Link href="/#top" scroll={false} className="text-teal-300">وب استودیو</Link> می باشد.
           </p>
           <div className="flex gap-4">
             {socials.map((social) => (

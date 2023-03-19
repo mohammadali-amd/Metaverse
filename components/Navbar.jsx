@@ -6,15 +6,16 @@ import styles from '../styles';
 import { navVariants } from '../utils/motion';
 
 const links = [
-  { name: 'صفحه اصلی', slug: '/' },
-  { name: ' نمونه کار ها', slug: 'portfolio' },
-  { name: 'تعرفه ها', slug: 'pricing' },
+  { name: 'صفحه اصلی', slug: '/#top' },
+  { name: ' نمونه کار ها', slug: '/#portfolio' },
+  { name: 'تعرفه ها', slug: '/#pricing' },
   { name: 'درباره ما', slug: 'about-us' },
   { name: 'تماس با ما', slug: 'contact-us' },
 ];
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
+  const [padding, setPadding] = useState('pt-8');
 
   return (
     <motion.nav
@@ -22,7 +23,8 @@ const Navbar = () => {
       initial="hidden"
       whileInView="show"
       viewport={{ once: true }}
-      className={`${styles.xPaddings} pt-8 relative`}
+      className={`${styles.xPaddings} ${padding} relative`}
+      id="top"
     >
       {/* Gradient */}
       <div className="absolute w-[50%] inset-0 gradient-01" />
@@ -32,7 +34,7 @@ const Navbar = () => {
         <ul className="hidden lg:flex gap-16 font-extrabold text-[21px] leading-[30px]  z-[2]">
           {links.map((item) => (
             <li key={item.slug}>
-              <Link href={item.slug}>{item.name}</Link>
+              <Link href={item.slug} scroll={false} legacyBehavior onClick={() => setPadding('pt-18')}>{item.name}</Link>
             </li>
           ))}
         </ul>
@@ -54,12 +56,14 @@ const Navbar = () => {
               className={nav ? 'fixed left-0 top-0 w-[80%] z-20 h-full border-r border-r-gray-900 bg-[#000300] opacity-[85%]' : 'fixed left-[-100%]'}
             >
               <div onClick={() => setNav(false)} className="flex justify-end m-6">
-                <img src="/close.svg" alt="close" className="w-[50px] h-[50px]" />
+                <Link href="/">
+                  <img src="/close.svg" alt="close" className="w-[50px] h-[50px]" />
+                </Link>
               </div>
               <ul className="mt-6">
                 {links.map((item) => (
                   <li key={item.slug} className="text-xl p-4 border-b border-gray-600">
-                    <Link href={item.slug}>{item.name}</Link>
+                    <Link href={item.slug} scroll={false} legacyBehavior onClick={() => setNav(false)}>{item.name}</Link>
                   </li>
                 ))}
               </ul>
