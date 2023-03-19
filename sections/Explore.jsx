@@ -2,14 +2,14 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 
 import styles from '../styles';
-import { fadeIn, staggerContainer } from '../utils/motion';
+import { staggerContainer } from '../utils/motion';
 import { ExploreCard, TitleText, TypingText } from '../components';
 import { exploreWorlds } from '../constants';
 
-const Explore = ({ paragraph }) => {
+const Explore = () => {
   const [active, setActive] = useState('project-3');
   return (
-    <section className={`${styles.paddings}`} id="explore">
+    <section className={`${styles.paddings}`} id="portfolio">
       <motion.div
         variants={staggerContainer}
         initial="hidden"
