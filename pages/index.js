@@ -58,15 +58,16 @@ const Page = () => (
   <div>
     <WhatsNew />
     <div className="relative">
-      <GetStarted />
       <div className="gradient-03 z-0" />
+      <GetStarted />
     </div>
     <div className="relative">
-      <Explore />
       <div className="gradient-04 z-0" />
+      <Explore />
     </div>
     <div className="relative">
       {/* <Insights /> */}
+      <div className="gradient-03 z-0" />
       <About
         title={HeroText.title}
         paragraph={HeroText.paragraph}
@@ -78,7 +79,7 @@ const Page = () => (
         viewport={{ once: false, amount: 0.25 }}
         className="2xl:max-w-[1280px] w-full mx-auto flex flex-col"
       >
-        <div className="flex items-center justify-center py-8">
+        <div className="flex items-center justify-center py-8 z-20">
           <div className="flex flex-col my-6 space-y-6 md:space-y-0 md:flex-row md:my-0 gap-8">
             {pricingData.map((item) => (
               <PricingCard
@@ -94,7 +95,6 @@ const Page = () => (
           </div>
         </div>
       </motion.div>
-      <div className="gradient-04 z-0" />
     </div>
   </div>
 );

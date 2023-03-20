@@ -30,8 +30,8 @@ const Navbar = () => {
       <div className="absolute w-[50%] inset-0 gradient-01" />
 
       {/* Desktop Menu */}
-      <div className={`${styles.innerWidth} mx-auto flex justify-between items-center gap-8 bg-white text-white shadow-lg rounded-2xl px-6 py-3 bg-clip-padding bg-opacity-40`}>
-        <ul className="hidden lg:flex gap-16 font-extrabold text-[21px] leading-[30px]  z-[2]">
+      <div className={`${styles.innerWidth} mx-auto flex justify-between items-center gap-8 bg-gray-300 text-white shadow-lg rounded-2xl px-6 py-3 bg-clip-padding bg-opacity-30`}>
+        <ul className="hidden lg:flex gap-16 font-extrabold text-[21px] leading-[30px] z-[2]">
           {links.map((item) => (
             <li key={item.slug}>
               <Link href={item.slug} scroll={false} legacyBehavior onClick={() => setPadding('pt-18')}>{item.name}</Link>
@@ -40,20 +40,22 @@ const Navbar = () => {
         </ul>
 
         {/* Logo */}
-        <Link href="/">
+        <Link href="/" className="z-10 hidden lg:block">
           <img src="Logo.png" alt="logo" className="w-[60px] md:w-[90px] object-contain" />
         </Link>
 
         {/* Mobile Menu */}
-        <div className="lg:hidden">
-          <div onClick={() => setNav(true)}>
-            <img src="/menu.svg" alt="menu" className="w-[24px] h-[24px] object-contain" />
-          </div>
+        <div className="flex items-center mx-auto gap-[200px] lg:hidden z-[20]">
+          {/* Logo */}
+          <img src="/menu.svg" alt="menu" onClick={() => setNav(true)} className="w-[24px] h-[24px] object-contain" />
+          <Link href="/#top" className="z-10">
+            <img src="Logo.png" alt="logo" className="w-[60px] md:w-[90px] object-contain" />
+          </Link>
           {nav && (
             <motion.div
-              whileInView={{ x: [-300, 0] }}
+              whileInView={{ x: [300, 0] }}
               transition={{ duration: 0.5, ease: 'easeInOut' }}
-              className={nav ? 'fixed left-0 top-0 w-[80%] z-20 h-full border-r border-r-gray-900 bg-[#000300] opacity-[85%]' : 'fixed left-[-100%]'}
+              className={nav ? 'fixed right-0 top-0 w-[85%] z-20 h-full border-r border-r-gray-900 bg-[#000300] opacity-[85%]' : 'fixed right-[-100%]'}
             >
               <div onClick={() => setNav(false)} className="flex justify-end m-6">
                 <Link href="/">
@@ -62,8 +64,8 @@ const Navbar = () => {
               </div>
               <ul className="mt-6">
                 {links.map((item) => (
-                  <li key={item.slug} className="text-xl p-4 border-b border-gray-600">
-                    <Link href={item.slug} scroll={false} legacyBehavior onClick={() => setNav(false)}>{item.name}</Link>
+                  <li key={item.slug} onClick={() => setNav(false)} className="text-xl p-4 border-b border-gray-600">
+                    <Link href={item.slug} scroll={false} legacyBehavior>{item.name}</Link>
                   </li>
                 ))}
               </ul>
