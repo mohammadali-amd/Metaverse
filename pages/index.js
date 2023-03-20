@@ -1,9 +1,8 @@
 import { motion } from 'framer-motion';
 
 import PricingCard from '../components/PricingCard';
+import PricingTxet from '../components/pricingText';
 import { Explore, GetStarted, WhatsNew } from '../sections';
-
-import About from '../sections/About';
 
 import { staggerContainer } from '../utils/motion';
 
@@ -47,13 +46,6 @@ const pricingData = [
   },
 ];
 
-const HeroText = {
-  title: 'تعرفه ها',
-  paragraph: `
-  ما در مجموعه وب استودیو با تلاش برای پیاده سازی امکانات و ویژگی های مورد نظر کارفرمایان با مناسبترین قیمت ها فعالیت داریم. همچنین امکان پرداخت قسطی هزینه سایت را هم برای شما عزیزان فراهم نمودیم. در جداول زیر حدود قیمت طراحی سایت مورد نیاز شما آورده شده است، اما برای هر سایت با امکانات خاصی که کارفرما درخواست دارد ممکن است که این هزینه کم یا زیاد شود. به همین منظور برای اطلاع از قیمت پروژه و وبسایت خود با ما از طریق راه های ارتباطی که در وبسایت آمده در تماس باشید تا کارشناسان ما در سریعترین زمان ممکن پاسخگوی شما عزیزان باشند.
-  `,
-};
-
 const Page = () => (
   <div>
     <WhatsNew />
@@ -68,10 +60,7 @@ const Page = () => (
     <div className="relative">
       {/* <Insights /> */}
       <div className="gradient-03 z-0" />
-      <About
-        title={HeroText.title}
-        paragraph={HeroText.paragraph}
-      />
+      <PricingTxet />
       <motion.div
         variants={staggerContainer}
         initial="hidden"
@@ -80,7 +69,7 @@ const Page = () => (
         className="2xl:max-w-[1280px] w-full mx-auto flex flex-col"
       >
         <div className="flex items-center justify-center py-8 z-20">
-          <div className="flex flex-col my-6 space-y-6 md:space-y-0 md:flex-row md:my-0 gap-8">
+          <div className="flex flex-col my-6 md:flex-row md:my-0 gap-8">
             {pricingData.map((item) => (
               <PricingCard
                 key={item.type}

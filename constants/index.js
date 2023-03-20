@@ -28,6 +28,7 @@ export const exploreWorlds = [
 
 export const startingFeatures = [
   'طراحی وبسایت',
+  'طراحی اپلیکیشن',
   'خدمات دیجیتال مارکتینگ',
   'سئو و تولید محتوا',
 ];
@@ -70,19 +71,23 @@ export const insights = [
 
 export const socials = [
   {
-    name: 'twitter',
-    url: '/twitter.svg',
+    name: 'whatsapp',
+    pic: '/whatsapp.svg',
+    url: 'https://wa.me/09981140432',
   },
   {
     name: 'linkedin',
-    url: '/linkedin.svg',
+    pic: '/linkedin.svg',
+    url: '',
   },
   {
     name: 'instagram',
-    url: '/instagram.svg',
+    pic: '/instagram.svg',
+    url: 'https://www.instagram.com/webstudio.official',
   },
   {
-    name: 'facebook',
-    url: '/facebook.svg',
+    name: 'mail',
+    pic: '/mail.svg',
+    url: 'mailto:webstudio.ir@gmail.com',
   },
 ];
