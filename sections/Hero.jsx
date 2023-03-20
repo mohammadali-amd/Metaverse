@@ -17,15 +17,13 @@ const Hero = () => (
           variants={textVariant(1.1)}
           className={styles.heroHeading}
         >
-          Metaverse
+          Web studio
         </motion.h1>
         <motion.div
           variants={textVariant(1.2)}
           className="flex flex-row justify-center items-center"
         >
-          <h1 className={styles.heroHeading}>Ma</h1>
-          <div className={styles.heroDText} />
-          <h1 className={styles.heroHeading}>Ness</h1>
+          <h1 className={styles.heroHeading}>وب استــودیــو</h1>
         </motion.div>
       </div>
 
@@ -35,15 +33,15 @@ const Hero = () => (
       >
         <div className="absolute w-full h-[300px] hero-gradient rounded-tl-[140px] z-0 -top-[30px]" />
         <img
-          src="/cover.png"
-          alt="cover"
+          src="/about-pic.jpg"
+          alt="about-webstudio"
           className="w-full sm:h-[500px] h-[350px] object-cover rounded-tl-[140px] z-10 relative"
         />
-        <div className="w-full flex justify-end sm:-mt-[70px] -mt-[50px] pr-[40px] relative z-10">
+        <div className="w-full flex justify-end sm:-mt-[150px] -mt-[100px] -mr-[20px] relative z-10">
           <img
-            src="/stamp.png"
+            src="/Logo.png"
             alt="stamp"
-            className="sm:w-[155px] w-[100px] sm:h-[155px] h-[100px] object-contain"
+            className="sm:w-[110px] w-[80px] sm:h-[155px] h-[100px] object-contain"
           />
         </div>
       </motion.div>

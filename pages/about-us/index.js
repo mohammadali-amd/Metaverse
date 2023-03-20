@@ -1,5 +1,3 @@
-import { motion } from 'framer-motion';
-import { fadeIn, staggerContainer } from '../../utils/motion';
 import { Hero, About } from '../../sections';
 
 const HeroText = {
@@ -15,20 +13,6 @@ const AboutUs = () => (
       title={HeroText.title}
       paragraph={HeroText.paragraph}
     />
-    <motion.div
-      variants={staggerContainer}
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: false, amount: 0.25 }}
-      className="2xl:max-w-[1280px] w-full flex justify-center items-center mx-auto flex-col"
-    >
-      <motion.p
-        variants={fadeIn('up', 'tween', 0.2, 1)}
-        className="mt-[8px] font-normal sm:text-[32px] text-[20px] text-center text-secondary-white"
-      >
-        ما در وب استودیو در تلاشیم با بکار بردن بروزترین تکنولوژی ها و در نظر گرفتن جزئیات کار، بهترین محصول را تحویل شما کارفرمایان عزیز دهیم و شما را از اعتماد به این مجموعه خرسند نماییم.
-      </motion.p>
-    </motion.div>
     <Hero />
   </div>
 );
