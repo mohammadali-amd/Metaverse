@@ -28,7 +28,7 @@ const PricingCard = ({ color = 'rgb(51 65 85)', type, title, price, CTA, data })
       <div className="flex flex-col space-y-2">
         {/* <!-- List Item --> */}
         {data.map((item) => (
-          <div className="flex justify-center">
+          <div className="flex justify-center" key={item}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="w-5 h-5"

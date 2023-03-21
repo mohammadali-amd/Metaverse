@@ -64,9 +64,9 @@ const Navbar = () => {
               </div>
               <ul className="mt-6">
                 {links.map((item) => (
-                  <li key={item.slug} onClick={() => setNav(false)} className="text-xl p-4 border-b border-gray-600">
-                    <Link href={item.slug} scroll={false} legacyBehavior>{item.name}</Link>
-                  </li>
+                  <Link key={item.slug} href={item.slug} scroll={false} legacyBehavior>
+                    <li className="text-xl p-4 border-b border-gray-600 cursor-pointer" onClick={() => setNav(false)}>{item.name}</li>
+                  </Link>
                 ))}
               </ul>
             </motion.div>

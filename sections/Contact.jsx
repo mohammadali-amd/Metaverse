@@ -26,7 +26,9 @@ const Contact = () => {
         viewport={{ once: false, amount: 0.25 }}
         className={`${styles.innerWidth} mx-auto flex flex-col`}
       >
-        <div className="gradient-03 z-0" />
+        <div className="relative">
+          <div className="lg:gradient-03 z-0" />
+        </div>
         <TypingText title="| تماس با ما" textStyles="text-center" />
         <TitleText title={<>راه های ارتباطی با ما</>} textStyles="text-center z-10" />
 
@@ -44,7 +46,7 @@ const Contact = () => {
             <img
               src="/whatsapp.svg"
               alt="whatsapp"
-              className="w-[50px] h-[50px] object-contain cursor-pointer"
+              className="w-[50px] h-[50px] object-contain"
             />
             <p className="text-2xl text-white" dir="ltr">0998 11 40 432</p>
           </a>
@@ -53,7 +55,7 @@ const Contact = () => {
             <img
               src="/instagram.svg"
               alt="instagram"
-              className="w-[50px] h-[50px] object-contain cursor-pointer"
+              className="w-[50px] h-[50px] object-contain"
             />
             <p className="text-2xl text-white">webstudio.official</p>
           </a>
@@ -62,7 +64,7 @@ const Contact = () => {
             <img
               src="/linkedin.svg"
               alt="linkedin"
-              className="w-[50px] h-[50px] object-contain cursor-pointer"
+              className="w-[50px] h-[50px] object-contain"
             />
             <p className="text-2xl text-white">webstudio.official</p>
           </div>
@@ -71,7 +73,7 @@ const Contact = () => {
             <img
               src="/mail.svg"
               alt="mail"
-              className="w-[50px] h-[50px] object-contain cursor-pointer"
+              className="w-[50px] h-[50px] object-contain"
             />
             <p className="text-2xl text-white">webstudio.ir@gmail.com</p>
           </a>
