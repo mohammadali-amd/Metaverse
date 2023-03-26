@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 import styles from '../styles';
 import { slideIn, staggerContainer, textVariant } from '../utils/motion';
@@ -32,15 +33,19 @@ const Hero = () => (
         className="relative w-full md:-mt-[20px] -mt-[12px]"
       >
         <div className="absolute w-full h-[300px] hero-gradient rounded-tl-[140px] z-0 -top-[30px]" />
-        <img
+        <Image
           src="/about-pic.jpg"
           alt="about-webstudio"
+          width={1500}
+          height={500}
           className="w-full sm:h-[500px] h-[350px] object-cover rounded-tl-[140px] z-10 relative"
         />
         <div className="w-full flex justify-end sm:-mt-[150px] -mt-[100px] -mr-[20px] relative z-10">
-          <img
+          <Image
             src="/Logo.png"
             alt="stamp"
+            width={100}
+            height={100}
             className="sm:w-[110px] w-[80px] sm:h-[155px] h-[100px] object-contain"
           />
         </div>

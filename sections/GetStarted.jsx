@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-
+import Image from 'next/image';
 import styles from '../styles';
 import { staggerContainer, fadeIn } from '../utils/motion';
 import { StartSteps, TitleText, TypingText } from '../components';
@@ -18,10 +18,12 @@ const GetStarted = () => (
         variants={fadeIn('left', 'tween', 0.2, 1)}
         className={`flex-1 ${styles.flexCenter}`}
       >
-        <img
+        <Image
           src="/web-design.svg"
           alt="web-design"
           className="w-[90%] h-[90%] object-contain"
+          width={100}
+          height={100}
         />
       </motion.div>
       <motion.div

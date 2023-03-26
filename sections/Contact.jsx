@@ -1,9 +1,17 @@
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useForm } from 'react-hook-form';
 
 import styles from '../styles';
 import { fadeIn, staggerContainer } from '../utils/motion';
 import { TitleText, TypingText } from '../components';
+
+const contactUs = [
+  { src: '/whatsapp.svg', alt: 'whatsapp', id: '0998 11 40 432', address: 'https://wa.me/09981140432' },
+  { src: '/instagram.svg', alt: 'instagram', id: 'webstudio.official', address: 'https://www.instagram.com/webstudio.official' },
+  { src: '/linkedin.svg', alt: 'linkedin', id: 'webstudio.official', address: '#' },
+  { src: '/mail.svg', alt: 'mail', id: 'webstudio.ir@gmail.com', address: 'mailto:webstudio.ir@gmail.com' },
+];
 
 const Contact = () => {
   const inputStyles = 'mb-5 w-full rounded-lg bg-teal-300 px-5 py-3 placeholder-white';
@@ -33,50 +41,34 @@ const Contact = () => {
         <TitleText title={<>راه های ارتباطی با ما</>} textStyles="text-center z-10" />
 
         <div className="flex justify-center pb-16">
-          <motion.img
+          <motion.div
             variants={fadeIn('up', 'tween', 0.5, 1)}
-            src="/arrow-down.svg"
-            alt="arrow down"
             className="w-[18px] h-[28px] object-contain mt-[28px]"
-          />
+          >
+            <Image
+              src="/arrow-down.svg"
+              alt="arrow down"
+              width={50}
+              height={50}
+            />
+          </motion.div>
         </div>
 
         <div className="lg:flex lg:justify-between space-y-16 lg:space-y-0 py-12 z-10">
-          <a target="_blank" href="https://wa.me/09981140432" className="grid justify-items-center space-y-6" rel="noreferrer">
-            <img
-              src="/whatsapp.svg"
-              alt="whatsapp"
-              className="w-[50px] h-[50px] object-contain"
-            />
-            <p className="text-2xl text-white" dir="ltr">0998 11 40 432</p>
-          </a>
 
-          <a target="_blank" href="https://www.instagram.com/webstudio.official" className="grid justify-items-center space-y-6" rel="noreferrer">
-            <img
-              src="/instagram.svg"
-              alt="instagram"
-              className="w-[50px] h-[50px] object-contain"
-            />
-            <p className="text-2xl text-white">webstudio.official</p>
-          </a>
+          {contactUs.map((item) => (
+            <a target="_blank" href={item.address} className="grid justify-items-center space-y-6" rel="noreferrer">
+              <Image
+                src={item.src}
+                alt={item.alt}
+                width={50}
+                height={50}
+                className="w-[50px] h-[50px] object-contain"
+              />
+              <p className="text-2xl text-white">{item.id}</p>
+            </a>
+          ))}
 
-          <div className="grid justify-items-center space-y-6">
-            <img
-              src="/linkedin.svg"
-              alt="linkedin"
-              className="w-[50px] h-[50px] object-contain"
-            />
-            <p className="text-2xl text-white">webstudio.official</p>
-          </div>
-
-          <a href="mailto:webstudio.ir@gmail.com" className="grid justify-items-center space-y-6">
-            <img
-              src="/mail.svg"
-              alt="mail"
-              className="w-[50px] h-[50px] object-contain"
-            />
-            <p className="text-2xl text-white">webstudio.ir@gmail.com</p>
-          </a>
         </div>
       </motion.div>
 
@@ -192,7 +184,13 @@ const Contact = () => {
             }}
           >
             <div className="w-full">
-              <img className="w-full rounded-2xl" src="/contact-pic.jpg" alt="contact-us-page-graphic" />
+              <Image
+                src="/contact-pic.jpg"
+                alt="contact-us-page-graphic"
+                width={500}
+                height={500}
+                className="w-full rounded-2xl"
+              />
             </div>
           </motion.div>
 

@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { TypingText } from '../components';
 
 import styles from '../styles';
@@ -29,12 +30,17 @@ const About = () => (
         برای طراحی سایت، اپلیکیشن موبایل، دیجیتال مارکتینگ و ... از طریق راه های ارتباطی ذکر شده با ما در تماس باشید. 😊💕
       </motion.p>
 
-      <motion.img
+      <motion.div
         variants={fadeIn('up', 'tween', 0.5, 1)}
-        src="/arrow-down.svg"
-        alt="arrow down"
         className="w-[18px] h-[28px] object-contain mt-[28px]"
-      />
+      >
+        <Image
+          src="/arrow-down.svg"
+          alt="arrow down"
+          width={50}
+          height={50}
+        />
+      </motion.div>
     </motion.div>
   </section>
 );
