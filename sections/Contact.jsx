@@ -7,14 +7,14 @@ import { fadeIn, staggerContainer } from '../utils/motion';
 import { TitleText, TypingText } from '../components';
 
 const contactUs = [
-  { src: '/whatsapp.svg', alt: 'whatsapp', id: '0998 11 40 432', address: 'https://wa.me/09981140432' },
+  { src: '/whatsapp.svg', alt: 'whatsapp', id: '09981140432', address: 'https://wa.me/09981140432' },
   { src: '/instagram.svg', alt: 'instagram', id: 'webstudio.official', address: 'https://www.instagram.com/webstudio.official' },
   { src: '/linkedin.svg', alt: 'linkedin', id: 'webstudio.official', address: '#' },
   { src: '/mail.svg', alt: 'mail', id: 'webstudio.ir@gmail.com', address: 'mailto:webstudio.ir@gmail.com' },
 ];
 
 const Contact = () => {
-  const inputStyles = 'mb-5 w-full rounded-lg bg-teal-300 px-5 py-3 placeholder-white';
+  const inputStyles = 'mb-5 w-full rounded-lg bg-teal-600 shadow-md px-5 py-3 placeholder-white';
 
   const { register, trigger, formState: { errors } } = useForm();
 
@@ -164,7 +164,7 @@ const Contact = () => {
               {/* Submit Button */}
               <button
                 type="submit"
-                className="mt-5 rounded-lg bg-teal-500 hover:bg-teal-700 px-20 py-3 transition duration-500 text-white"
+                className="mt-5 rounded-lg shadow-md bg-teal-500 hover:bg-teal-700 px-20 py-3 transition duration-500 text-white"
               >
                 ارسال
               </button>
